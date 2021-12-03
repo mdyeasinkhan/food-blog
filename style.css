@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --primary-color:  #3A3A3A;
+    --secondary-color: #FFFFFF;
+    --gray-color: #959595;
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: 'Playfair Display', serif;
+}
+
+h1,h2,h3{
+    font-weight: 800;
+
+    margin: 1.6rem 0;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.5rem;
+}
+p{
+    font-weight: 400;
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+a{
+    text-decoration: none;
+    
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+span{
+    color: var(--gray-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* navigation */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu a{
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 1.6rem;
+}
+
+
+
+/* hero section  */
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.right{
+    background: #3C7D36;
+    
+}
+.left{
+    background-image: url(images/Rectangle\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+}
+.content_box{
+    background-color: white;
+    position: absolute;
+    padding: 3rem;
+    width: 40%;
+    top: 20%;
+    left: 45%;
+}
+/* blog section  */
+.blog-container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 5rem 0;
+    grid-row: 5rem;
+}
+.blog{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+.blog-post{
+
+    background-color:  rgba(52, 114, 47, 0.15);
+    margin: 1.6rem;
+    padding: 1.6rem;
+    color: var(--primary-color);
+
+}
+
+
+.blog .thumbnail{
+    object-fit: contain;
+}
+.blog-content{
+    margin: 1.6rem;
+
+}
+.popular-post .content h4{
+    color: var(--primary-color);
+}
+
+/* sidebar  */
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.wrapper .thumb{
+    flex: 1;
+}
+.wrapper .content{
+    flex: 2;
+    padding: 1.6rem;
+}
+
+/* pagination */
+.pagination a{
+    margin: 1.6rem;
+}
+.active{
+    background: var(--gray-color);
+    padding: 1.6rem;
+}
+
+/* footer  */
+footer{
+    background-color: hsl(115, 40%, 35%);
+    margin-top: 2rem;
+    padding: 2rem 0;
+
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+    
+    
+    
+}
+.footer-content{
+    color: white;
+}
+.footer-content a{
+    color: white;
+}
+.footer-about{
+    color: white;
+}
+.footer .footer-menu{
+    
+    display: flex;
+    flex-direction: column;
+}
+.footer .social-icon{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 100px;
+    
+}
+.social-icon img{
+    width: 60%;
+}
+.copyright{
+    
+    background: black;
+}
+
+.copyright p{
+    margin: 0;
+    padding: 2rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    /* navigation */
+    nav{
+        flex-direction: column;
+        padding-bottom: 2rem;
+        
+    }
+
+    /* hero section  */
+    h1{
+        font-size: 3rem;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+    }
+    .content_box{
+        width: 50%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+    /* blog section  */
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    
+    .blog{
+        grid-template-columns: 1fr;
+    }
+    /* footer  */
+    .footer{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        
+    }
+    .social-icon img{
+        width: 100px;
+        
+    }
+    .social-icon {
+        width: 328px;
+        gap: 10px;
+    }
+}
